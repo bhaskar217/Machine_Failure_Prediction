@@ -1,5 +1,3 @@
-YAML
-
 name: Week 2 MLS pipeline
 
 on:
@@ -13,7 +11,7 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - name: Install Dependencies
         run: pip install -r week_2_mls/requirements.txt
       - name: Upload Dataset to Hugging Face Hub
@@ -26,7 +24,7 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - name: Install Dependencies
         run: pip install -r week_2_mls/requirements.txt
       - name: Run Data Preparation
@@ -39,7 +37,7 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - name: Install Dependencies
         run: pip install -r week_2_mls/requirements.txt
       - name: Model Building
@@ -52,7 +50,7 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - name: Install Dependencies
         run: pip install -r week_2_mls/requirements.txt
       - name: Push files to Frontend Hugging Face Space
