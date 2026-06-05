@@ -3,6 +3,9 @@ name: Week 2 MLS pipeline
 on:
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   register-dataset:
     runs-on: ubuntu-latest
