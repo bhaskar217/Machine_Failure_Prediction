@@ -3,7 +3,7 @@ from huggingface_hub import HfApi, create_repo
 import os
 
 token = os.getenv("HF_TOKEN")
-repo_id = "bhaskar217/machine-failure-prediction"
+repo_id = "bhaskarmothali217/machine-failure-prediction"
 repo_type = "dataset"
 
 api = HfApi(token=token)
