@@ -17,10 +17,10 @@ from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 
 api = HfApi()
 
-Xtrain_path = "hf://datasets/bhaskar217/machine-failure-prediction/Xtrain.csv"
-Xtest_path = "hf://datasets/bhaskar217/machine-failure-prediction/Xtest.csv"
-ytrain_path = "hf://datasets/bhaskar217/machine-failure-prediction/ytrain.csv"
-ytest_path = "hf://datasets/bhaskar217/machine-failure-prediction/ytest.csv"
+Xtrain_path = "hf://datasets/bhaskarmothali217/machine-failure-prediction/Xtrain.csv"
+Xtest_path = "hf://datasets/bhaskarmothali217/machine-failure-prediction/Xtest.csv"
+ytrain_path = "hf://datasets/bhaskarmothali217/machine-failure-prediction/ytrain.csv"
+ytest_path = "hf://datasets/bhaskarmothali217/machine-failure-prediction/ytest.csv"
 
 Xtrain = pd.read_csv(Xtrain_path)
 Xtest = pd.read_csv(Xtest_path)
@@ -89,7 +89,7 @@ print(classification_report(ytest, y_pred_test))
 joblib.dump(best_model, "best_machine_failure_model_v1.joblib")
 
 # Upload to Hugging Face
-repo_id = "bhaskar217/machine_failure_model"
+repo_id = "bhaskarmothali217/machine_failure_model"
 repo_type = "model"
 
 api = HfApi(token=os.getenv("HF_TOKEN"))
